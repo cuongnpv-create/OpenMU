@@ -11,6 +11,10 @@ OpenMU **có sẵn hạ tầng đa ngôn ngữ**, và nó hoạt động theo **
 Nhưng có một cái bẫy trong image chính thức khiến nó im lặng không chạy, và một
 giới hạn kiến trúc khiến phần lớn chữ trong game không đổi được từ server.
 
+**Client MU vẽ được đầy đủ dấu tiếng Việt, kể cả dấu chồng** — đã kiểm chứng
+trong game thật, xem [mục cuối](#đã-kiểm-chứng-trong-client-thật). Đây là câu hỏi
+quyết định của cả dự án: nếu font hỏng thì mọi bản dịch bên dưới đều vô dụng.
+
 ---
 
 ## Hai cơ chế, hai nơi lưu
@@ -209,9 +213,49 @@ nhân đôi hậu tố.
 
 ---
 
-## Việc chưa làm được
+## Đã kiểm chứng trong client thật
 
-**Chưa ai xác nhận dấu tiếng Việt render ra sao trong client MU.** Chữ đã đúng ở
-DB, đúng qua `ResourceManager`, đúng trong runtime production — nhưng khâu cuối
-là font bitmap của client vẽ `ầ`, `ườ`, `Đ`. Nếu ra ô vuông thì phải làm font
-trước khi đi tiếp. Cần một client thật mới trả lời được.
+**Client MU hiển thị đầy đủ dấu tiếng Việt, kể cả dấu chồng.** Thử ngày 29/09/2026
+trên client MuMain build Windows x64, kết nối tới server thật.
+
+Bằng chứng 1 — bản dịch chạy end-to-end, không phải mô phỏng:
+
+```
+test400Dk đã vào game.
+```
+
+Đây là `PlayerEnteredGameMessage` đi qua trọn chuỗi `Account.LanguageIsoCode='vi'`
+→ `Player.Culture` → satellite assembly → client.
+
+Bằng chứng 2 — dấu chồng, khối Unicode khó nhất:
+
+```
+THỬ DẤU: Lệnh · không · tồn · tại · Hầm Ngục · Thủy Cung · ườ ệ ộ ậ ỹ
+```
+
+### Vì sao phải thử hai lần
+
+Bằng chứng 1 chỉ chứa `đ` `ã` `à` — nằm ở Latin-1 Supplement và Latin Extended-A,
+vùng gần như font nào cũng có. Không đủ để kết luận.
+
+Chữ khó của tiếng Việt là **dấu chồng** (`ệ ồ ậ ườ ỹ`), nằm ở **Latin Extended
+Additional** (U+1EA0–U+1EF9) — một khối hoàn toàn khác, thường thiếu ở font
+bitmap kiểu cũ. Đó mới là rủi ro thật, và bằng chứng 2 mới loại trừ được nó.
+
+### Cách thử lại
+
+Khung chat của client **mất tiêu điểm mỗi khi cửa sổ khác lấy lại focus**, nên gõ
+lệnh `/abc` để lấy `CommandDoesNotExist` là đường không đáng tin khi thao tác
+bằng script.
+
+Đường chắc chắn hơn: sửa thẳng một chuỗi trong `PlayerMessage.vi.resx` (ví dụ
+`PlayerEnteredGameMessage`, vốn hiện ngay khi vào game), build lại satellite,
+restart server rồi đăng nhập lại. Không phụ thuộc thao tác bàn phím nào.
+
+```bash
+cd i18n
+# sửa PlayerMessage.vi.resx
+./build-satellite.sh
+docker compose ... restart openmu-startup   # chờ ~30s, connect server lên sau game server
+```
+
