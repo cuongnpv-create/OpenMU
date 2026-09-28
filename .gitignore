@@ -1,0 +1,13 @@
+# .NET
+bin/
+obj/
+*.user
+
+# repo upstream do script tu clone
+/OpenMU/
+/MuMain/
+
+# output khi chay
+*.jsonl.tmp
+MuError.log
+in-game-test-results/

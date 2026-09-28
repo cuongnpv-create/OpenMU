@@ -1,0 +1,168 @@
+=== phien DI BO BINH THUONG (WalkRequest vs ObjectWalkedExtended) ===
+ObjectId nhan vat : 512
+StepDelay gia dinh: 333.3ms
+
+========================================================================================================
+  63544.1 --> WalkRequest  tu (52, 226)    4 buoc [SE E E E]  => client muon (56, 229)
+  63546.0 <-- ObjectWalkedExtended (+1.9ms) src=(52, 226) target=(56, 229) steps=0 rot=2
+              diem xuat phat: khop   |   dich: khop
+
+  93393.8 --> WalkRequest  tu (142, 121)  13 buoc [SE SE SE SE SE SE E E SE E E E SE]  => client muon (155, 126)
+  93398.7 <-- ObjectWalkedExtended (+4.9ms) src=(142, 121) target=(155, 126) steps=0 rot=2
+              diem xuat phat: khop   |   dich: khop
+
+ 106728.5 --> WalkRequest  tu (156, 126)  13 buoc [SE SE SE SE SE SE SE SE SE SE SE SE SE]  => client muon (169, 126)
+ 106730.3 <-- ObjectWalkedExtended (+1.8ms) src=(155, 126) target=(169, 126) steps=0 rot=3
+              diem xuat phat: server dang o (155, 126)   |   dich: khop
+
+ 117082.1 --> WalkRequest  tu (170, 126)   5 buoc [SE SE S SE SE]  => client muon (175, 125)
+ 117085.8 <-- ObjectWalkedExtended (+3.7ms) src=(169, 126) target=(175, 125) steps=0 rot=3
+              diem xuat phat: server dang o (169, 126)   |   dich: khop
+
+ 133166.0 --> WalkRequest  tu (175, 125)   7 buoc [SE SE E E E E E]  => client muon (182, 130)
+ 133167.5 <-- ObjectWalkedExtended (+1.5ms) src=(175, 125) target=(182, 130) steps=0 rot=2
+              diem xuat phat: khop   |   dich: khop
+
+ 138468.1 --> WalkRequest  tu (182, 130)   6 buoc [SE E E E E E]  => client muon (188, 135)
+ 138470.3 <-- ObjectWalkedExtended (+2.2ms) src=(182, 130) target=(188, 135) steps=0 rot=4
+              diem xuat phat: khop   |   dich: khop
+
+ 142828.8 --> WalkRequest  tu (188, 135)  11 buoc [NE NE E E E E E E E E E]  => client muon (197, 146)
+ 142832.7 <-- ObjectWalkedExtended (+3.9ms) src=(188, 135) target=(197, 146) steps=0 rot=4
+              diem xuat phat: khop   |   dich: khop
+
+ 148662.4 --> WalkRequest  tu (197, 146)   0 buoc []  => client muon (197, 146)
+          <-- (khong co phan hoi trong 300ms)
+
+ 149689.5 --> WalkRequest  tu (197, 146)   8 buoc [SW SW SW SW S S S S]  => client muon (201, 138)
+ 149699.9 <-- ObjectWalkedExtended (+10.4ms) src=(197, 146) target=(201, 138) steps=0 rot=0
+              diem xuat phat: khop   |   dich: khop
+
+ 153593.3 --> WalkRequest  tu (201, 138)   8 buoc [SW SW SW SW SW SW SW SW]  => client muon (201, 130)
+ 153595.0 <-- ObjectWalkedExtended (+1.7ms) src=(201, 138) target=(201, 130) steps=0 rot=2
+              diem xuat phat: khop   |   dich: khop
+
+ 157149.5 --> WalkRequest  tu (201, 130)   1 buoc [W]  => client muon (200, 129)
+ 157154.2 <-- ObjectWalkedExtended (+4.7ms) src=(201, 130) target=(200, 129) steps=0 rot=1
+              diem xuat phat: khop   |   dich: khop
+
+ 158029.3 --> WalkRequest  tu (200, 129)   1 buoc [W]  => client muon (199, 128)
+ 158030.5 <-- ObjectWalkedExtended (+1.2ms) src=(200, 129) target=(199, 128) steps=0 rot=0
+              diem xuat phat: khop   |   dich: khop
+
+ 158855.1 --> WalkRequest  tu (199, 128)   0 buoc []  => client muon (199, 128)
+          <-- (khong co phan hoi trong 300ms)
+              speedcheck: 2 o / 1706ms | toi thieu 556ms | thieu -1150ms (nguong 1000) -> hop le
+
+ 159927.7 --> WalkRequest  tu (199, 128)   7 buoc [NW N N N N N N]  => client muon (192, 134)
+ 159928.8 <-- ObjectWalkedExtended (+1.1ms) src=(199, 128) target=(192, 134) steps=0 rot=2
+              diem xuat phat: khop   |   dich: khop
+              speedcheck: 2 o / 2778ms | toi thieu 556ms | thieu -2223ms (nguong 1000) -> hop le
+
+ 164253.6 --> WalkRequest  tu (192, 134)   8 buoc [NE N NW N N N N N]  => client muon (185, 141)
+ 164255.0 <-- ObjectWalkedExtended (+1.4ms) src=(192, 134) target=(185, 141) steps=0 rot=6
+              diem xuat phat: khop   |   dich: khop
+
+ 170904.9 --> WalkRequest  tu (185, 141)  10 buoc [S S S S S SE S S S SW]  => client muon (194, 132)
+ 170906.4 <-- ObjectWalkedExtended (+1.5ms) src=(185, 141) target=(194, 132) steps=0 rot=6
+              diem xuat phat: khop   |   dich: khop
+
+ 177233.4 --> WalkRequest  tu (194, 132)   0 buoc []  => client muon (194, 132)
+          <-- (khong co phan hoi trong 300ms)
+
+ 178538.6 --> WalkRequest  tu (194, 132)  13 buoc [NE NE NE NE NE NE N N N N N N N]  => client muon (187, 145)
+ 178540.1 <-- ObjectWalkedExtended (+1.5ms) src=(194, 132) target=(187, 145) steps=0 rot=5
+              diem xuat phat: khop   |   dich: khop
+
+ 186131.9 --> WalkRequest  tu (186, 146)   6 buoc [N N N NE NE NE]  => client muon (183, 152)
+ 186135.1 <-- ObjectWalkedExtended (+3.2ms) src=(187, 145) target=(183, 152) steps=0 rot=6
+              diem xuat phat: server dang o (187, 145)   |   dich: khop
+
+ 189308.9 --> WalkRequest  tu (183, 152)   0 buoc []  => client muon (183, 152)
+          <-- (khong co phan hoi trong 300ms)
+
+========================================================================================================
+tong: 20 WalkRequest | 236 ObjectWalkedExtended (16 cua minh, 220 cua object khac)
+so ObjectWalked co StepCount != 0: 0/236  (SendWalkDirections tat -> server khong echo duong di)
+
+=== phien CO INJECT SPEEDHACK ===
+ObjectId nhan vat : 512
+StepDelay gia dinh: 210.5ms
+
+========================================================================================================
+  73488.0 --> WalkRequest  tu (145, 120)  13 buoc [SE SE E E E E SE E E SE SE SE SE]  => client muon (158, 126)
+  73492.3 <-- ObjectWalkedExtended (+4.3ms) src=(145, 120) target=(158, 126) steps=0 rot=2
+              diem xuat phat: khop   |   dich: khop
+
+  73510.9 --> WalkRequest  tu (149, 120)  13 buoc [SE SE E E E E SE E E SE SE SE SE]  => client muon (162, 126)
+  73512.2 <-- ObjectWalkedExtended (+1.3ms) src=(146, 120) target=(162, 126) steps=0 rot=3
+              diem xuat phat: server dang o (146, 120)   |   dich: khop
+
+  73532.4 --> WalkRequest  tu (153, 120)  13 buoc [SE SE E E E E SE E E SE SE SE SE]  => client muon (166, 126)
+  73533.7 <-- ObjectWalkedExtended (+1.3ms) src=(150, 120) target=(166, 126) steps=0 rot=3
+              diem xuat phat: server dang o (150, 120)   |   dich: khop
+              speedcheck: 8 o / 44ms | toi thieu 1403ms | thieu +1359ms (nguong 632) -> *** SPEEDHACK ***
+
+  73556.8 --> WalkRequest  tu (157, 120)  13 buoc [SE SE E E E E SE E E SE SE SE SE]  => client muon (170, 126)
+  73561.1 <-- ObjectWalkedExtended (+4.3ms) src=(154, 120) target=(170, 126) steps=0 rot=3
+              diem xuat phat: server dang o (154, 120)   |   dich: khop
+              speedcheck: 12 o / 69ms | toi thieu 2105ms | thieu +2036ms (nguong 632) -> *** SPEEDHACK ***
+
+  85600.5 --> WalkRequest  tu (159, 126)  13 buoc [SE SE SE SE SE SE SE SE SE SE SE SE SE]  => client muon (172, 126)
+  85643.5 <-- ObjectWalkedExtended (+43.0ms) src=(170, 126) target=(180, 126) steps=0 rot=3
+              diem xuat phat: server dang o (170, 126)   |   dich: SERVER SUA -> (180, 126)
+
+  85620.8 --> WalkRequest  tu (163, 126)  13 buoc [SE SE SE SE SE SE SE SE SE SE SE SE SE]  => client muon (176, 126)
+  85643.5 <-- ObjectWalkedExtended (+22.7ms) src=(170, 126) target=(180, 126) steps=0 rot=3
+              diem xuat phat: server dang o (170, 126)   |   dich: SERVER SUA -> (180, 126)
+
+  85642.5 --> WalkRequest  tu (167, 126)  13 buoc [SE SE SE SE SE SE SE SE SE SE SE SE SE]  => client muon (180, 126)
+  85643.5 <-- ObjectWalkedExtended (+1.0ms) src=(170, 126) target=(180, 126) steps=0 rot=3
+              diem xuat phat: server dang o (170, 126)   |   dich: khop
+              speedcheck: 8 o / 42ms | toi thieu 1403ms | thieu +1361ms (nguong 632) -> *** SPEEDHACK ***
+
+  85663.9 --> WalkRequest  tu (171, 126)  13 buoc [SE SE SE SE SE SE SE SE SE SE SE SE SE]  => client muon (184, 126)
+  85665.2 <-- ObjectWalkedExtended (+1.3ms) src=(168, 126) target=(184, 126) steps=0 rot=3
+              diem xuat phat: server dang o (168, 126)   |   dich: khop
+              speedcheck: 12 o / 63ms | toi thieu 2105ms | thieu +2042ms (nguong 632) -> *** SPEEDHACK ***
+
+  85941.2 --> WalkRequest  tu (184, 126)   8 buoc [W W NW NW NW NW NW NW]  => client muon (176, 124)
+          <-- (khong co phan hoi trong 300ms)
+              speedcheck: 25 o / 341ms | toi thieu 4385ms | thieu +4045ms (nguong 632) -> *** SPEEDHACK ***
+
+  85961.7 --> WalkRequest  tu (188, 126)   8 buoc [W W NW NW NW NW NW NW]  => client muon (180, 124)
+          <-- (khong co phan hoi trong 300ms)
+              speedcheck: 25 o / 341ms | toi thieu 4385ms | thieu +4045ms (nguong 632) -> *** SPEEDHACK ***
+
+  85982.0 --> WalkRequest  tu (192, 126)   8 buoc [W W NW NW NW NW NW NW]  => client muon (184, 124)
+          <-- (khong co phan hoi trong 300ms)
+              speedcheck: 25 o / 340ms | toi thieu 4385ms | thieu +4046ms (nguong 632) -> *** SPEEDHACK ***
+
+  86003.3 --> WalkRequest  tu (196, 126)   8 buoc [W W NW NW NW NW NW NW]  => client muon (188, 124)
+          <-- (khong co phan hoi trong 300ms)
+              speedcheck: 25 o / 339ms | toi thieu 4385ms | thieu +4046ms (nguong 632) -> *** SPEEDHACK ***
+
+  86337.3 --> WalkRequest  tu (172, 126)   2 buoc [S S]  => client muon (174, 124)
+  86341.4 <-- ObjectWalkedExtended (+4.1ms) src=(172, 126) target=(174, 124) steps=0 rot=3
+              diem xuat phat: khop   |   dich: khop
+              speedcheck: 36 o / 396ms | toi thieu 6315ms | thieu +5919ms (nguong 632) -> *** SPEEDHACK ***
+
+  86360.8 --> WalkRequest  tu (176, 126)   2 buoc [S S]  => client muon (178, 124)
+  86362.2 <-- ObjectWalkedExtended (+1.4ms) src=(173, 125) target=(178, 124) steps=0 rot=2
+              diem xuat phat: server dang o (173, 125)   |   dich: khop
+              speedcheck: 36 o / 399ms | toi thieu 6315ms | thieu +5916ms (nguong 632) -> *** SPEEDHACK ***
+
+  86381.4 --> WalkRequest  tu (180, 126)   2 buoc [S S]  => client muon (182, 124)
+  86382.8 <-- ObjectWalkedExtended (+1.4ms) src=(177, 125) target=(182, 124) steps=0 rot=2
+              diem xuat phat: server dang o (177, 125)   |   dich: khop
+              speedcheck: 36 o / 399ms | toi thieu 6315ms | thieu +5916ms (nguong 632) -> *** SPEEDHACK ***
+
+  86404.9 --> WalkRequest  tu (184, 126)   2 buoc [S S]  => client muon (186, 124)
+          <-- (khong co phan hoi trong 300ms)
+              speedcheck: 36 o / 402ms | toi thieu 6315ms | thieu +5913ms (nguong 632) -> *** SPEEDHACK ***
+
+  94375.3 --> WalkRequest  tu (174, 124)   6 buoc [E E E E E E]  => client muon (180, 130)
+  94399.7 <-- ObjectWalkedExtended (+24.4ms) src=(181, 125) target=(184, 130) steps=0 rot=2
+              diem xuat phat: server dang o (181, 125)   |   dich: SERVER SUA -> (184, 130)
+
+  94396.6 --> WalkRequest  tu (178, 124)   6 buoc [E E E E E E]  => client muon (184, 130)
