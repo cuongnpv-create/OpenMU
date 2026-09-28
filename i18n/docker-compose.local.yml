@@ -1,0 +1,34 @@
+services:
+  # Admin panel CHI nghe tren localhost -> khong lo ra Internet.
+  # Truy cap tu may ban qua SSH tunnel.
+  nginx-80:
+    restart: unless-stopped
+    ports: !override
+      - "127.0.0.1:80:80"
+
+  openmu-startup:
+    # Image goc chi co icu-data-en -> GetCultures tra ve 5 culture tieng Anh,
+    # khien Player.cs:290 khong map duoc LanguageIsoCode='vi'. Xem Dockerfile.vi.
+    image: openmu-vi:latest
+    restart: unless-stopped
+    # Satellite assembly tieng Viet (PlayerMessage.vi.resources)
+    volumes:
+      - ./i18n/vi:/app/vi:ro
+    environment:
+      # Gia tri that nam trong .env (da gitignore). Thieu .env -> loopback,
+      # tuc chi choi duoc tren chinh may chu, khong lo IP ra repo.
+      RESOLVE_IP: ${RESOLVE_IP:-loopback}
+    # Compose goc co dong `- "8080"` -> publish admin API ra cong ngau nhien
+    # tren MOI interface. Ghi de: 8080 chi nghe localhost, cac cong game van cong khai.
+    ports: !override
+      - "127.0.0.1:8080:8080"
+      - "44405:44405"
+      - "44406:44406"
+      - "55901-55906:55901-55906"
+      - "55980:55980"
+
+  # Postgres chi nghe localhost.
+  database:
+    restart: unless-stopped
+    ports: !override
+      - "127.0.0.1:5433:5432"

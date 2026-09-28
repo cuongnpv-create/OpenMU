@@ -1,0 +1,5 @@
+# Image OpenMU + du lieu ICU day du (goc chi co icu-data-en -> GetCultures
+# chi tra ve 5 culture tieng Anh, khien Player.cs:290 khong tim thay 'vi').
+FROM munique/openmu:latest
+USER root
+RUN apk add --no-cache icu-data-full

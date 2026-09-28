@@ -31,6 +31,7 @@ log và ảnh đều lấy từ phiên chạy thực tế trên Ubuntu 24.04.
 | [02 — Build client](docs/02-build-client.md) | Toolchain Linux/Windows, 3 thứ docs thiếu, control socket điều khiển client bằng script |
 | [03 — Dump packet](docs/03-dump-packet.md) | Vì sao tcpdump không đủ, proxy MITM giải mã, bộ decode opcode |
 | [04 — Chống speedhack](docs/04-anticheat-walk.md) | So WalkRequest với ObjectWalkedExtended, mổ thuật toán, thí nghiệm inject |
+| [05 — Việt hóa](docs/05-viet-hoa.md) | Cơ chế i18n theo từng người chơi, cái bẫy ICU làm nó hỏng trong im lặng, vì sao tên trong game không đổi được từ server |
 
 ---
 
@@ -62,7 +63,7 @@ dotnet run -c Release --no-build -- --out /tmp/mu-packets.jsonl
 ## Nội dung repo
 
 ```
-docs/         4 tài liệu tiếng Việt, mỗi bước đều kèm số đo thật
+docs/         5 tài liệu tiếng Việt, mỗi bước đều kèm số đo thật
 scripts/      openmu-up.sh        dựng server một lệnh
               mumain-build.sh     build client một lệnh
               mu-drive.py         điều khiển client qua control socket
@@ -71,6 +72,10 @@ scripts/      openmu-up.sh        dựng server một lệnh
 mu-proxy/     proxy MITM (C#) giải mã SimpleModulus + Xor32 bằng chính code OpenMU
 samples/      dump packet, log anti-cheat, kết quả phân tích — dữ liệu thật
 screenshots/  Lorencia, Devias, Dungeon, Atlans, Tarkan, Icarus
+i18n/         PlayerMessage.vi.resx  243 thông báo hệ thống đã dịch
+              build-satellite.sh     biên dịch .resx -> satellite assembly
+              Dockerfile.vi          image + icu-data-full (bắt buộc, xem docs/05)
+              glossary.py            bảng thuật ngữ dịch tên item/quái/map
 ```
 
 ---

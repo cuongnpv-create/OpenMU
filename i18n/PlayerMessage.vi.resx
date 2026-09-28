@@ -1,0 +1,791 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PlayerEnteredGameMessage" xml:space="preserve">
+    <value>{0} đã vào game.</value>
+  </data>
+  <data name="CommandNeedsArguments" xml:space="preserve">
+    <value>Lệnh cần {0} tham số nhưng chỉ nhận được {1}.</value>
+  </data>
+  <data name="RequiredArgumentNotUsed" xml:space="preserve">
+    <value>Thiếu tham số bắt buộc tên {0}.</value>
+  </data>
+  <data name="ArgumentInvalidType" xml:space="preserve">
+    <value>Tham số {0} sai kiểu, cần giá trị kiểu {1}.</value>
+  </data>
+  <data name="CharacterNameRequired" xml:space="preserve">
+    <value>Cần nhập tên nhân vật.</value>
+  </data>
+  <data name="CharacterNotFound" xml:space="preserve">
+    <value>Không tìm thấy nhân vật '{0}'.</value>
+  </data>
+  <data name="GuildNotFound" xml:space="preserve">
+    <value>Không tìm thấy guild {0}.</value>
+  </data>
+  <data name="NameRequired" xml:space="preserve">
+    <value>Cần nhập tên.</value>
+  </data>
+  <data name="LoginNameRequired" xml:space="preserve">
+    <value>Cần nhập tên đăng nhập.</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Không tìm thấy tài khoản.</value>
+  </data>
+  <data name="AccountPropertyNotFound" xml:space="preserve">
+    <value>Không tìm thấy thuộc tính tài khoản.</value>
+  </data>
+  <data name="CommandDoesNotExist" xml:space="preserve">
+    <value>Lệnh '{0}' không tồn tại.</value>
+  </data>
+  <data name="MapNotFound" xml:space="preserve">
+    <value>Không tìm thấy map {0}.</value>
+  </data>
+  <data name="CharacterNameAlreadyExists" xml:space="preserve">
+    <value>Đã có nhân vật trùng tên.</value>
+  </data>
+  <data name="AwardMoneyFailByFullInventory" xml:space="preserve">
+    <value>Không nhận được zen thưởng, hành trang đã đầy.</value>
+  </data>
+  <data name="CantEnterEventWithItem" xml:space="preserve">
+    <value>Không thể vào sự kiện khi đang mang '{0}'.</value>
+  </data>
+  <data name="MuHelperAlreadyRunning" xml:space="preserve">
+    <value>MU Helper đang chạy rồi.</value>
+  </data>
+  <data name="MuHelperMinimumLevel" xml:space="preserve">
+    <value>MU Helper chỉ dùng được từ level {0}.</value>
+  </data>
+  <data name="MuHelperMaximumLevel" xml:space="preserve">
+    <value>MU Helper không dùng được sau level {0}.</value>
+  </data>
+  <data name="MuHelperRequiresMoney" xml:space="preserve">
+    <value>MU Helper cần {0} zen.</value>
+  </data>
+  <data name="AlreadyInDuel" xml:space="preserve">
+    <value>Bạn đang trong trận đấu tay đôi.</value>
+  </data>
+  <data name="OtherPlayerAlreadyInDuel" xml:space="preserve">
+    <value>Người chơi kia đang trong trận đấu tay đôi.</value>
+  </data>
+  <data name="DuelChannelIsFull" xml:space="preserve">
+    <value>Kênh đấu tay đôi đã đầy.</value>
+  </data>
+  <data name="DuelRequestMustBeOnSameMap" xml:space="preserve">
+    <value>Chỉ có thể đấu tay đôi với người chơi cùng map.</value>
+  </data>
+  <data name="NoDuelDuringMiniGame" xml:space="preserve">
+    <value>Không thể đấu tay đôi trong mini game.</value>
+  </data>
+  <data name="NoDuelWhileBeingPlayerKiller" xml:space="preserve">
+    <value>Không thể đấu tay đôi khi bạn đang là PK.</value>
+  </data>
+  <data name="NoDuelWithPlayerKiller" xml:space="preserve">
+    <value>Không thể đấu tay đôi với người đang là PK.</value>
+  </data>
+  <data name="NoDuelDuringGuildWar" xml:space="preserve">
+    <value>Không thể đấu tay đôi trong lúc guild war.</value>
+  </data>
+  <data name="NoDuelDuringSelfDefense" xml:space="preserve">
+    <value>Không thể đấu tay đôi khi đang bật tự vệ.</value>
+  </data>
+  <data name="NoDuelWithOpenedNpcDialog" xml:space="preserve">
+    <value>Không thể đấu tay đôi khi đang mở hội thoại NPC.</value>
+  </data>
+  <data name="NoDuelWithWrongState" xml:space="preserve">
+    <value>Không thể đấu tay đôi khi một trong hai người ở trạng thái không phù hợp.</value>
+  </data>
+  <data name="ItemEffectNotFound" xml:space="preserve">
+    <value>Không tìm thấy hiệu ứng của vật phẩm.</value>
+  </data>
+  <data name="InvalidLostMap" xml:space="preserve">
+    <value>Lost map không hợp lệ.</value>
+  </data>
+  <data name="NoKalimaGateOnEventMap" xml:space="preserve">
+    <value>Không thể mở cổng Kalima trên map sự kiện.</value>
+  </data>
+  <data name="NoKalimaGateInSafezone" xml:space="preserve">
+    <value>Không thể mở cổng Kalima trong khu an toàn.</value>
+  </data>
+  <data name="UndefinedGateNpc" xml:space="preserve">
+    <value>NPC cổng chưa được định nghĩa.</value>
+  </data>
+  <data name="KalimaEntranceNotFound" xml:space="preserve">
+    <value>Không tìm thấy lối vào Kalima.</value>
+  </data>
+  <data name="EventMapCreatedOnEntranceWithoutTimetable" xml:space="preserve">
+    <value>Map sự kiện được tạo khi vào. Không có lịch cố định.</value>
+  </data>
+  <data name="EventNotImplementedYet" xml:space="preserve">
+    <value>Sự kiện này chưa được cài đặt.</value>
+  </data>
+  <data name="AddingMultiplePointsWhileMiniGameNotAllowed" xml:space="preserve">
+    <value>Không được cộng nhiều điểm cùng lúc khi đang chơi mini game.</value>
+  </data>
+  <data name="LoginAttemptWarning" xml:space="preserve">
+    <value>Có người khác vừa thử đăng nhập tài khoản này. Nếu không phải bạn, hãy đổi mật khẩu.</value>
+  </data>
+  <data name="RequestedLanguageNotFound" xml:space="preserve">
+    <value>Không tìm thấy ngôn ngữ '{0}'.</value>
+  </data>
+  <data name="LanguageChanged" xml:space="preserve">
+    <value>Đã đổi ngôn ngữ sang '{0}' ({1}).</value>
+  </data>
+  <data name="AvailableLanguagesCaption" xml:space="preserve">
+    <value>Các ngôn ngữ có sẵn:</value>
+  </data>
+  <data name="AccountHasBeenBanned" xml:space="preserve">
+    <value>[{0}] Tài khoản {1} đã bị khóa.</value>
+  </data>
+  <data name="AccountOfHasBeenBanned" xml:space="preserve">
+    <value>[{0}] Tài khoản của {1} đã bị khóa.</value>
+  </data>
+  <data name="AccountChatBannedResult" xml:space="preserve">
+    <value>[{0}] Tài khoản của {1} bị cấm chat {2} phút</value>
+  </data>
+  <data name="YouAreChatBanned" xml:space="preserve">
+    <value>Bạn bị cấm chat {0} phút</value>
+  </data>
+  <data name="YourChatBanRemovedByGameMaster" xml:space="preserve">
+    <value>Lệnh cấm chat của bạn đã được GM gỡ bỏ.</value>
+  </data>
+  <data name="ChatBanRemoved" xml:space="preserve">
+    <value>[{0}] Đã gỡ cấm chat cho tài khoản của {1}.</value>
+  </data>
+  <data name="MonsterNotFoundByNumber" xml:space="preserve">
+    <value>Không tìm thấy quái số {0}.</value>
+  </data>
+  <data name="MonsterCreatedByGameMaster" xml:space="preserve">
+    <value>Đã tạo quái số {0}, id: {1}.</value>
+  </data>
+  <data name="CommandResultPlayerDisconnected" xml:space="preserve">
+    <value>[{0}] {1} đã bị ngắt kết nối.</value>
+  </data>
+  <data name="LevelInformation" xml:space="preserve">
+    <value>Level của '{0}': {1}.</value>
+  </data>
+  <data name="LevelUpPointsInfo" xml:space="preserve">
+    <value>Điểm cộng của '{0}': {1}.</value>
+  </data>
+  <data name="MasterLevelInfo" xml:space="preserve">
+    <value>Master level của '{0}': {1}.</value>
+  </data>
+  <data name="MasterLevelUpPointsInfo" xml:space="preserve">
+    <value>Điểm cộng master của '{0}': {1}.</value>
+  </data>
+  <data name="MoneyInfo" xml:space="preserve">
+    <value>Zen của '{0}': {1}.</value>
+  </data>
+  <data name="ResetsInfo" xml:space="preserve">
+    <value>Số lần reset của '{0}': {1}.</value>
+  </data>
+  <data name="ResetSystemInactive" xml:space="preserve">
+    <value>Hệ thống reset chưa được bật trên server này.</value>
+  </data>
+  <data name="StatPointInfo" xml:space="preserve">
+    <value>Chỉ số của '{0}': {1}.</value>
+  </data>
+  <data name="GuildDisconnectResult" xml:space="preserve">
+    <value>[{0}] {1} đã bị ngắt kết nối.</value>
+  </data>
+  <data name="MovedByGameMaster" xml:space="preserve">
+    <value>Bạn đã được GM dịch chuyển.</value>
+  </data>
+  <data name="MovedPlayerResult" xml:space="preserve">
+    <value>[{0}] {1} đã được chuyển tới {2} tại {3}, {4}</value>
+  </data>
+  <data name="ItemCreatedResult" xml:space="preserve">
+    <value>[{0}] đã tạo {1}</value>
+  </data>
+  <data name="ItemGroupNumberNotExists" xml:space="preserve">
+    <value>{0} {1} không tồn tại.</value>
+  </data>
+  <data name="ItemLevelExceeded" xml:space="preserve">
+    <value>Level không được lớn hơn {0}.</value>
+  </data>
+  <data name="MonsterNotFoundById" xml:space="preserve">
+    <value>Không tìm thấy quái có id {0}.</value>
+  </data>
+  <data name="InvalidMerchantId" xml:space="preserve">
+    <value>ID NPC "{0}" không hợp lệ. Hãy nhập ID NPC bán hàng hợp lệ.</value>
+  </data>
+  <data name="NpcIsNotMerchant" xml:space="preserve">
+    <value>NPC này không phải NPC bán hàng.</value>
+  </data>
+  <data name="OnlineCountInfo" xml:space="preserve">
+    <value>[{0}] {1} GM và {2} người chơi đang online</value>
+  </data>
+  <data name="NoWarehouseNpcFound" xml:space="preserve">
+    <value>Không tìm thấy NPC kho</value>
+  </data>
+  <data name="PlayerKillLevelRangeError" xml:space="preserve">
+    <value>Cấp PK phải nằm trong khoảng {0} đến {1}.</value>
+  </data>
+  <data name="PlayerKillCountMustBePositive" xml:space="preserve">
+    <value>Số lần PK phải lớn hơn 0.</value>
+  </data>
+  <data name="PlayerKillStateChangeResult" xml:space="preserve">
+    <value>[{0}] Trạng thái của {1} đã đổi thành {2} với {3} lần giết trong {4} phút</value>
+  </data>
+  <data name="PkStatusClearedByGameMaster" xml:space="preserve">
+    <value>GM đã xóa trạng thái PK của bạn.</value>
+  </data>
+  <data name="PkClearedResult" xml:space="preserve">
+    <value>[{0}] Đã xóa {1} lần giết.</value>
+  </data>
+  <data name="NpcNotFoundById" xml:space="preserve">
+    <value>Không tìm thấy NPC có id {0}.</value>
+  </data>
+  <data name="NpcRemovedById" xml:space="preserve">
+    <value>Đã xóa NPC có id {0}.</value>
+  </data>
+  <data name="InvalidCharacterLevel" xml:space="preserve">
+    <value>Level không hợp lệ — phải từ 1 đến {0}.</value>
+  </data>
+  <data name="SetLevelResult" xml:space="preserve">
+    <value>Đã đặt level thành {0}.</value>
+  </data>
+  <data name="InvalidLevelUpPoints" xml:space="preserve">
+    <value>Điểm cộng không hợp lệ — phải lớn hơn hoặc bằng 0.</value>
+  </data>
+  <data name="SetLevelUpPointsResult" xml:space="preserve">
+    <value>Đã đặt điểm cộng thành {0}.</value>
+  </data>
+  <data name="SetMasterLevelResult" xml:space="preserve">
+    <value>Đã đặt master level thành {0}.</value>
+  </data>
+  <data name="InvalidMasterLevelUpPoints" xml:space="preserve">
+    <value>Điểm cộng master không hợp lệ — phải lớn hơn hoặc bằng 0.</value>
+  </data>
+  <data name="SetMasterLevelUpPointsResult" xml:space="preserve">
+    <value>Đã đặt điểm cộng master thành {0}.</value>
+  </data>
+  <data name="InvalidMoneyAmount" xml:space="preserve">
+    <value>Số zen không hợp lệ — phải từ 0 đến {0}.</value>
+  </data>
+  <data name="SetMoneyResult" xml:space="preserve">
+    <value>Đã đặt zen thành {0}.</value>
+  </data>
+  <data name="InvalidResetsAmount" xml:space="preserve">
+    <value>Số lần reset không hợp lệ — phải lớn hơn 0.</value>
+  </data>
+  <data name="InvalidResetsWithLimits" xml:space="preserve">
+    <value>Số lần reset không hợp lệ — phải từ 0 đến {0}.</value>
+  </data>
+  <data name="SetResetsResult" xml:space="preserve">
+    <value>Đã đặt số lần reset thành {0}.</value>
+  </data>
+  <data name="InvalidStatValue" xml:space="preserve">
+    <value>{0} không hợp lệ — phải lớn hơn 1.</value>
+  </data>
+  <data name="InvalidStatValueRange" xml:space="preserve">
+    <value>{0} không hợp lệ — phải từ 0 đến {1}.</value>
+  </data>
+  <data name="SetStatResult" xml:space="preserve">
+    <value>Đã đặt {0} thành {1} cho người chơi {2}.</value>
+  </data>
+  <data name="UnbanAccountResult" xml:space="preserve">
+    <value>[{0}] Tài khoản {1} đã được mở khóa.</value>
+  </data>
+  <data name="UnbanAccountOfCharacterResult" xml:space="preserve">
+    <value>[{0}] Tài khoản của {1} đã được mở khóa.</value>
+  </data>
+  <data name="KanturuMayaRises" xml:space="preserve">
+    <value>Maya trỗi dậy từ sâu trong Tháp Luyện Kim!</value>
+  </data>
+  <data name="KanturuPhase1Start" xml:space="preserve">
+    <value>Giai đoạn 1: Tiêu diệt lũ quái để phá phong ấn sức mạnh của Maya!</value>
+  </data>
+  <data name="KanturuMayaLeftHandAppeared" xml:space="preserve">
+    <value>Maya (Tay Trái) đã xuất hiện! Hạ gục nó!</value>
+  </data>
+  <data name="KanturuPhase1Cleared" xml:space="preserve">
+    <value>Hoàn thành giai đoạn 1! Giai đoạn 2 bắt đầu sau 2 phút...</value>
+  </data>
+  <data name="KanturuPhase2Start" xml:space="preserve">
+    <value>Giai đoạn 2: Thêm thuộc hạ của Maya kéo tới!</value>
+  </data>
+  <data name="KanturuMayaRightHandAppeared" xml:space="preserve">
+    <value>Maya (Tay Phải) đã xuất hiện! Hạ gục nó!</value>
+  </data>
+  <data name="KanturuPhase2Cleared" xml:space="preserve">
+    <value>Hoàn thành giai đoạn 2! Giai đoạn 3 bắt đầu sau 2 phút...</value>
+  </data>
+  <data name="KanturuPhase3Start" xml:space="preserve">
+    <value>Giai đoạn 3: Đợt cuối cùng đang tới!</value>
+  </data>
+  <data name="KanturuBothMayaHandsAppeared" xml:space="preserve">
+    <value>Cả hai tay của Maya đã xuất hiện! Hạ gục cả hai!</value>
+  </data>
+  <data name="KanturuMayaHandsFallen" xml:space="preserve">
+    <value>Đôi tay của Maya đã gục! Nhặt chiến lợi phẩm — Nightmare thức giấc sau 10 giây...</value>
+  </data>
+  <data name="KanturuNightmareGuardiansAppeared" xml:space="preserve">
+    <value>Vệ binh của Nightmare đã xuất hiện! NIGHTMARE thức giấc sau 3 giây!</value>
+  </data>
+  <data name="KanturuNightmareAppeared" xml:space="preserve">
+    <value>NIGHTMARE đã xuất hiện! Hạ gục hắn để giành chiến thắng!</value>
+  </data>
+  <data name="KanturuNightmareTeleport2" xml:space="preserve">
+    <value>Nightmare đã dịch chuyển! Hắn hồi phục toàn bộ sức mạnh!</value>
+  </data>
+  <data name="KanturuNightmareTeleport3" xml:space="preserve">
+    <value>Nightmare lại dịch chuyển! Hắn mạnh hơn bao giờ hết!</value>
+  </data>
+  <data name="KanturuNightmareTeleport4" xml:space="preserve">
+    <value>Nightmare đang ở đường cùng! Kết liễu hắn!</value>
+  </data>
+  <data name="KanturuVictory" xml:space="preserve">
+    <value>Nightmare đã bị đánh bại! Tháp Luyện Kim Kanturu thuộc về các bạn!</value>
+  </data>
+  <data name="KanturuRequiredItemDestroyed" xml:space="preserve">
+    <value>{0} của bạn đã bị phá hủy! Bạn đang bị đẩy khỏi Tháp Luyện Kim Kanturu.</value>
+  </data>
+  <data name="KanturuBarrierOpening" xml:space="preserve">
+    <value>Rào chắn đã mở — tòa tháp đang chờ!</value>
+  </data>
+  <data name="KanturuTowerConquered" xml:space="preserve">
+    <value>Tháp Luyện Kim Kanturu đã bị chinh phục! Tháp nay đã mở.</value>
+  </data>
+  <data name="KanturuTowerClosingWarning" xml:space="preserve">
+    <value>Tháp Kanturu sẽ đóng sau 5 phút!</value>
+  </data>
+  <data name="KanturuTowerClosed" xml:space="preserve">
+    <value>Tháp Kanturu đã đóng.</value>
+  </data>
+  <data name="KanturuDefeat" xml:space="preserve">
+    <value>Sự kiện Kanturu đã kết thúc. Chúc may mắn lần sau!</value>
+  </data>
+  <data name="BloodCastleArchangelAquiredMessageFormat" xml:space="preserve">
+    <value>{0} đã nhận được {1}</value>
+  </data>
+  <data name="PickupLimitReached" xml:space="preserve">
+    <value>Đã đạt giới hạn với '{0}'.</value>
+  </data>
+  <data name="NotEnoughMoneyToEnter" xml:space="preserve">
+    <value>Không đủ zen để vào {0}.</value>
+  </data>
+  <data name="MiniGameStartsInMinutesFormat" xml:space="preserve">
+    <value>{0} bắt đầu sau {1} phút.</value>
+  </data>
+  <data name="MiniGameCantStartWithLessThanPlayers" xml:space="preserve">
+    <value>Không thể bắt đầu với ít hơn {0} người chơi.</value>
+  </data>
+  <data name="SkipWaitNotInMiniGame" xml:space="preserve">
+    <value>Bạn phải đang ở trong sự kiện mini game mới bỏ qua được thời gian chờ.</value>
+  </data>
+  <data name="SkipWaitRequested" xml:space="preserve">
+    <value>Đã bỏ qua thời gian chờ.</value>
+  </data>
+  <data name="SkipWaitAnnouncedFormat" xml:space="preserve">
+    <value>{0} đã bỏ qua thời gian chờ. Sự kiện tiếp tục!</value>
+  </data>
+  <data name="SkipWaitNothingToSkip" xml:space="preserve">
+    <value>Hiện không có thời gian chờ nào để bỏ qua. Sự kiện đã chạy rồi.</value>
+  </data>
+  <data name="MiniGameForceRestartFormat" xml:space="preserve">
+    <value>Sự kiện {0} đang chạy đã bị dừng. Lượt mới sẽ bắt đầu sớm.</value>
+  </data>
+  <data name="MiniGameForceStartInitiatedFormat" xml:space="preserve">
+    <value>{0} sắp bắt đầu.</value>
+  </data>
+  <data name="KillAllMonstersFormat" xml:space="preserve">
+    <value>Đã tiêu diệt {0} quái.</value>
+  </data>
+  <data name="TalkingNotImplementedFormat" xml:space="preserve">
+    <value>Tính năng nói chuyện với NPC này ({0}, {1}) chưa được cài đặt.</value>
+  </data>
+  <data name="BloodCastleCrystalStatusDestroyed" xml:space="preserve">
+    <value>{0} đã phá hủy Tượng Pha Lê!</value>
+  </data>
+  <data name="CharacterWithNameAlreadyExists" xml:space="preserve">
+    <value>Đã có nhân vật trùng tên.</value>
+  </data>
+  <data name="CantDeleteGuildMember" xml:space="preserve">
+    <value>Không thể xóa thành viên guild. Hãy rời guild trước.</value>
+  </data>
+  <data name="NotEnoughLevelUpPointsAvailable" xml:space="preserve">
+    <value>Không đủ điểm cộng.</value>
+  </data>
+  <data name="MaximumAttributeValueReachedFormat" xml:space="preserve">
+    <value>Đã đạt tối đa {0} {1}.</value>
+  </data>
+  <data name="AttributeNotAvailable" xml:space="preserve">
+    <value>Chỉ số không khả dụng.</value>
+  </data>
+  <data name="ChatBanMinutesRemaining" xml:space="preserve">
+    <value>Cấm chat: còn {0} phút.</value>
+  </data>
+  <data name="ChatBanSecondsRemaining" xml:space="preserve">
+    <value>Cấm chat: còn {0} giây.</value>
+  </data>
+  <data name="WrongSecurityCode" xml:space="preserve">
+    <value>Sai mã bảo vệ.</value>
+  </data>
+  <data name="UsingThisItemNotImplemented" xml:space="preserve">
+    <value>Chưa cài đặt chức năng dùng vật phẩm này.</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Vật phẩm không xác định</value>
+  </data>
+  <data name="InventoryFull" xml:space="preserve">
+    <value>Hành trang đã đầy</value>
+  </data>
+  <data name="NotEnoughMoney" xml:space="preserve">
+    <value>Bạn không đủ zen</value>
+  </data>
+  <data name="NoItemToRepair" xml:space="preserve">
+    <value>Không có vật phẩm nào để sửa.</value>
+  </data>
+  <data name="NotEnoughMoneyToRepair" xml:space="preserve">
+    <value>Bạn không đủ zen để sửa.</value>
+  </data>
+  <data name="YouLackOfJewels" xml:space="preserve">
+    <value>Bạn không đủ ngọc.</value>
+  </data>
+  <data name="StackedJewelNotFound" xml:space="preserve">
+    <value>Không tìm thấy ngọc đã xếp chồng.</value>
+  </data>
+  <data name="SelectedItemIsNotStackedJewel" xml:space="preserve">
+    <value>Vật phẩm đã chọn không phải ngọc xếp chồng.</value>
+  </data>
+  <data name="InventoryNotEnoughSpace" xml:space="preserve">
+    <value>Hành trang không đủ chỗ.</value>
+  </data>
+  <data name="TheVaultIsLocked" xml:space="preserve">
+    <value>Rương đã bị khóa.</value>
+  </data>
+  <data name="CantEquipItemDuringEvent" xml:space="preserve">
+    <value>Không thể trang bị vật phẩm này trong sự kiện.</value>
+  </data>
+  <data name="YouCantWearThisItem" xml:space="preserve">
+    <value>Bạn không thể mặc vật phẩm này.</value>
+  </data>
+  <data name="ItemIsBoundToInventoryOfCharacter" xml:space="preserve">
+    <value>Vật phẩm này bị khóa trong hành trang của nhân vật này.</value>
+  </data>
+  <data name="ItemCannotBeDropped" xml:space="preserve">
+    <value>Vật phẩm này không thể vứt bỏ.</value>
+  </data>
+  <data name="ItemCannotBeRepaired" xml:space="preserve">
+    <value>Vật phẩm này không thể sửa.</value>
+  </data>
+  <data name="ItemCannotBeSoldInPersonalStore" xml:space="preserve">
+    <value>Vật phẩm này không bán được ở shop cá nhân.</value>
+  </data>
+  <data name="ItemCannotBeSoldToNpc" xml:space="preserve">
+    <value>Vật phẩm này không bán được.</value>
+  </data>
+  <data name="ItemCannotBeStored" xml:space="preserve">
+    <value>Vật phẩm này không cất được vào rương.</value>
+  </data>
+  <data name="ItemCannotBeTraded" xml:space="preserve">
+    <value>Vật phẩm này không giao dịch được.</value>
+  </data>
+  <data name="NotEnoughMoneyToSendLetter" xml:space="preserve">
+    <value>Không đủ zen để gửi thư.</value>
+  </data>
+  <data name="ErrorDuringSendingLetter" xml:space="preserve">
+    <value>Rất tiếc, có lỗi xảy ra khi gửi thư.</value>
+  </data>
+  <data name="MuHelperIsDisabled" xml:space="preserve">
+    <value>MU Helper đang bị tắt</value>
+  </data>
+  <data name="MuHelperCantHandleStatus" xml:space="preserve">
+    <value>MU Helper không xử lý được trạng thái: {0}</value>
+  </data>
+  <data name="PartyNotPossibleDuringEvent" xml:space="preserve">
+    <value>Không thể lập party trong sự kiện này.</value>
+  </data>
+  <data name="PlayerIsAlreadyInParty" xml:space="preserve">
+    <value>{0} đã ở trong một party.</value>
+  </data>
+  <data name="YouAreNotPartyMaster" xml:space="preserve">
+    <value>Bạn không phải chủ party.</value>
+  </data>
+  <data name="RequestedPlayerForParty" xml:space="preserve">
+    <value>Đã mời {0} vào party.</value>
+  </data>
+  <data name="SellerInventoryFull" xml:space="preserve">
+    <value>Hành trang của người bán đã đầy.</value>
+  </data>
+  <data name="PlayerStoreNotOpen" xml:space="preserve">
+    <value>Shop của người chơi chưa mở.</value>
+  </data>
+  <data name="CharacterTooStrongMessage" xml:space="preserve">
+    <value>Bạn đủ mạnh để tự lo rồi.</value>
+  </data>
+  <data name="NotEnoughMoneyToProceed" xml:space="preserve">
+    <value>Không đủ zen để tiếp tục</value>
+  </data>
+  <data name="MissingMapRequirement" xml:space="preserve">
+    <value>Chưa đủ điều kiện để vào map: {0}</value>
+  </data>
+  <data name="UnexpectedErrorDuringClosingTrade" xml:space="preserve">
+    <value>Có lỗi bất ngờ khi kết thúc giao dịch.</value>
+  </data>
+  <data name="UncheckTradeAcceptButtonFirst" xml:space="preserve">
+    <value>Hãy bỏ chọn nút đồng ý giao dịch trước</value>
+  </data>
+  <data name="LevelTooLowToEnterMap" xml:space="preserve">
+    <value>Level của bạn quá thấp để vào map này.</value>
+  </data>
+  <data name="HappyHourEventHasBeenStarted" xml:space="preserve">
+    <value>Sự kiện Happy Hour đã bắt đầu!</value>
+  </data>
+  <data name="SelfDefenseInitiatedFormat" xml:space="preserve">
+    <value>Tự vệ được kích hoạt do {0} tấn công {1}!</value>
+  </data>
+  <data name="SelfDefenseDiminishesFormat" xml:space="preserve">
+    <value>Trạng thái tự vệ của {0} với {1} đã hết.</value>
+  </data>
+  <data name="ResetNotEnabled" xml:space="preserve">
+    <value>Reset chưa được bật.</value>
+  </data>
+  <data name="CantResetWithOpenedWindows" xml:space="preserve">
+    <value>Không thể reset khi còn cửa sổ đang mở.</value>
+  </data>
+  <data name="NotEnteredTheGame" xml:space="preserve">
+    <value>Chưa vào game.</value>
+  </data>
+  <data name="ResetNotConfigured" xml:space="preserve">
+    <value>Reset chưa được cấu hình.</value>
+  </data>
+  <data name="NextResetInfoCompactWithItem" xml:space="preserve">
+    <value>Reset #{0}: cần level {1}, {2} zen, {3} x {4}; nhận {5} điểm, tổng {6}</value>
+  </data>
+  <data name="NextResetInfoCompactNoItem" xml:space="preserve">
+    <value>Reset #{0}: cần level {1}, {2} zen; nhận {3} điểm, tổng {4}</value>
+  </data>
+  <data name="RequiredLevelForReset" xml:space="preserve">
+    <value>Level cần để reset là {0}.</value>
+  </data>
+  <data name="MaximumResetsReached" xml:space="preserve">
+    <value>Đã đạt tối đa {0} lần reset.</value>
+  </data>
+  <data name="NotEnoughItemsForReset" xml:space="preserve">
+    <value>Bạn không đủ vật phẩm để reset, cần {0} x {1}.</value>
+  </data>
+  <data name="NotEnoughMoneyForReset" xml:space="preserve">
+    <value>Bạn không đủ zen để reset, cần {0} zen.</value>
+  </data>
+  <data name="DuelBattleBeginsInSecondsFormat" xml:space="preserve">
+    <value>Trận đấu bắt đầu sau {0} giây</value>
+  </data>
+  <data name="LetterInvalid" xml:space="preserve">
+    <value>Thư không hợp lệ.</value>
+  </data>
+  <data name="OpenStorePlayerNotFound" xml:space="preserve">
+    <value>Mở shop: không tìm thấy người chơi.</value>
+  </data>
+  <data name="PlayerNamesDontMatch" xml:space="preserve">
+    <value>Tên người chơi không khớp. {0} &lt;&gt; {1}</value>
+  </data>
+  <data name="TradePartnerNotFound" xml:space="preserve">
+    <value>Không tìm thấy đối tác giao dịch.</value>
+  </data>
+  <data name="UnknownWarpIndex" xml:space="preserve">
+    <value>Chỉ số dịch chuyển không xác định {0}</value>
+  </data>
+  <data name="LevelUpCongrats" xml:space="preserve">
+    <value>Chúc mừng, bạn đã lên level {0}.</value>
+  </data>
+  <data name="MasterLevelUpCongrats" xml:space="preserve">
+    <value>Chúc mừng, bạn đã lên master level {0}.</value>
+  </data>
+  <data name="YouGotKilledBy" xml:space="preserve">
+    <value>Bạn đã bị {0} hạ gục</value>
+  </data>
+  <data name="DisconnectedByGameMaster" xml:space="preserve">
+    <value>Bạn đã bị GM ngắt kết nối.</value>
+  </data>
+  <data name="DisconnectedByAdmin" xml:space="preserve">
+    <value>Bạn đã bị quản trị viên ngắt kết nối.</value>
+  </data>
+  <data name="TemporaryBanByGameMaster" xml:space="preserve">
+    <value>Tài khoản của bạn đã bị GM khóa tạm thời.</value>
+  </data>
+  <data name="CommandExtensions_RequiredArgumentMissing" xml:space="preserve">
+    <value>Thiếu tham số bắt buộc tên {0}.</value>
+  </data>
+  <data name="CommandExtensionsArgumentInvalidType" xml:space="preserve">
+    <value>Tham số {0} sai kiểu, cần giá trị kiểu {1}.</value>
+  </data>
+  <data name="CommandExtensionsInvalidArgumentCount" xml:space="preserve">
+    <value>Lệnh cần {0} tham số nhưng chỉ nhận được {1}.</value>
+  </data>
+  <data name="CharacterNameIsRequired" xml:space="preserve">
+    <value>Cần nhập tên nhân vật.</value>
+  </data>
+  <data name="DurationMustBeLongerThan0" xml:space="preserve">
+    <value>Thời lượng phải lớn hơn 0 phút.</value>
+  </data>
+  <data name="UnknownAttribute" xml:space="preserve">
+    <value>Chỉ số không xác định: '{0}'.</value>
+  </data>
+  <data name="CharacterHasNoStatAttribute" xml:space="preserve">
+    <value>Nhân vật không có chỉ số '{0}'.</value>
+  </data>
+  <data name="OfflineLevelingStarted" xml:space="preserve">
+    <value>Đã bật cày offline. Bạn có thể đăng nhập lại bất cứ lúc nào để dừng.</value>
+  </data>
+  <data name="OfflineLevelingFailed" xml:space="preserve">
+    <value>Không bật được cày offline. Hãy thử lại ở khu an toàn.</value>
+  </data>
+  <data name="OfflineLevelingAlreadyActive" xml:space="preserve">
+    <value>Tài khoản này đang cày offline rồi.</value>
+  </data>
+  <data name="OfflineLevelingMustBeAlive" xml:space="preserve">
+    <value>Bạn phải còn sống mới bật được cày offline.</value>
+  </data>
+  <data name="OfflineLevelingNotOnMap" xml:space="preserve">
+    <value>Bạn phải đang ở trong map mới bật được cày offline.</value>
+  </data>
+  <data name="OfflineLevelingNoCharacterSelected" xml:space="preserve">
+    <value>Chưa chọn nhân vật.</value>
+  </data>
+  <data name="OfflineLevelingMuHelperNotRunning" xml:space="preserve">
+    <value>MU Helper phải đang chạy mới bật được cày offline.</value>
+  </data>
+  <data name="StatResetNotEnabled" xml:space="preserve">
+    <value>Reset chỉ số chưa được bật.</value>
+  </data>
+  <data name="StatResetNotConfigured" xml:space="preserve">
+    <value>Reset chỉ số chưa được cấu hình.</value>
+  </data>
+  <data name="RequiredLevelForStatReset" xml:space="preserve">
+    <value>Level cần để reset chỉ số là {0}.</value>
+  </data>
+  <data name="NotEnoughMoneyForStatReset" xml:space="preserve">
+    <value>Bạn không đủ zen để reset chỉ số, cần {0} zen.</value>
+  </data>
+  <data name="NotEnoughItemsForStatReset" xml:space="preserve">
+    <value>Bạn không đủ vật phẩm để reset chỉ số, cần {0} x {1}.</value>
+  </data>
+  <data name="CantResetStatsNotInSafezone" xml:space="preserve">
+    <value>Chỉ có thể reset chỉ số trong khu an toàn.</value>
+  </data>
+  <data name="CantResetStatsWithOpenedWindows" xml:space="preserve">
+    <value>Không thể reset chỉ số khi còn cửa sổ đang mở.</value>
+  </data>
+  <data name="StatResetChatCommandDisabled" xml:space="preserve">
+    <value>Lệnh /resetstats đang bị tắt.</value>
+  </data>
+  <data name="StatsResetSuccessfully" xml:space="preserve">
+    <value>Chỉ số của bạn đã được reset. Bạn có {0} điểm cộng.</value>
+  </data>
+  <data name="InvasionMonsterDefeated" xml:space="preserve">
+    <value>{0} đã hạ gục {1} {2}!</value>
+  </data>
+  <data name="PkClearCommandOnlyForGameMasters" xml:space="preserve">
+    <value>Lệnh này chỉ dành cho Game Master.</value>
+  </data>
+  <data name="PkClearOnlyClearOwnPk" xml:space="preserve">
+    <value>Bạn chỉ có thể xóa trạng thái PK của chính mình.</value>
+  </data>
+  <data name="PkClearTargetNotPlayerKiller" xml:space="preserve">
+    <value>{0} không phải PK.</value>
+  </data>
+  <data name="PkClearYouAreNotPlayerKiller" xml:space="preserve">
+    <value>Bạn không phải PK.</value>
+  </data>
+  <data name="ItemDoesNotBelongToYou" xml:space="preserve">
+    <value>Vật phẩm này không phải của bạn.</value>
+  </data>
+  <data name="CharacterNotStrongEnoughMessage" xml:space="preserve">
+    <value>Bạn chưa đủ mạnh cho việc này.</value>
+  </data>
+  <data name="DoppelgangerIceWalkerAppeared" xml:space="preserve">
+    <value>Ice Walker đã xuất hiện! Hạ gục nó trong một phút, nếu không lũ quái sau sẽ mạnh hơn.</value>
+  </data>
+  <data name="DoppelgangerIceWalkerEscaped" xml:space="preserve">
+    <value>Ice Walker đã trốn thoát! Lũ quái sau sẽ mạnh hơn.</value>
+  </data>
+  <data name="DoppelgangerIceWalkerKilled" xml:space="preserve">
+    <value>Ice Walker đã bị hạ gục!</value>
+  </data>
+  <data name="RaklionSelupanAppeared" xml:space="preserve">
+    <value>Selupan đã xuất hiện. Cổng Hatchery sẽ đóng sau {0} phút.</value>
+  </data>
+  <data name="RaklionHatcheryClosed" xml:space="preserve">
+    <value>Cổng Hatchery đã đóng.</value>
+  </data>
+  <data name="RaklionHatcheryOpensIn" xml:space="preserve">
+    <value>Cổng Hatchery sẽ mở sau {0}.</value>
+  </data>
+  <data name="RaklionHatcheryIsClosed" xml:space="preserve">
+    <value>Cổng Hatchery đã đóng, bạn không thể vào.</value>
+  </data>
+  <data name="RaklionHatcheryOpened" xml:space="preserve">
+    <value>Cổng Hatchery đã mở.</value>
+  </data>
+  <data name="RaklionSelupanDefeated" xml:space="preserve">
+    <value>{0} đã hạ gục Selupan! Cổng Hatchery sẽ mở sau {1}.</value>
+  </data>
+  <data name="RaklionBattleFailed" xml:space="preserve">
+    <value>Trận chiến với Selupan đã thất bại. Cổng Hatchery sẽ mở sau {0}.</value>
+  </data>
+  <data name="RaklionDurationHoursMinutes" xml:space="preserve">
+    <value>{0} giờ {1} phút</value>
+  </data>
+  <data name="RaklionDurationMinutes" xml:space="preserve">
+    <value>{0} phút</value>
+  </data>
+</root>
