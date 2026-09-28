@@ -31,6 +31,7 @@ log và ảnh đều lấy từ phiên chạy thực tế trên Ubuntu 24.04.
 | [02 — Build client](docs/02-build-client.md) | Toolchain Linux/Windows, 3 thứ docs thiếu, control socket điều khiển client bằng script |
 | [03 — Dump packet](docs/03-dump-packet.md) | Vì sao tcpdump không đủ, proxy MITM giải mã, bộ decode opcode |
 | [04 — Chống speedhack](docs/04-anticheat-walk.md) | So WalkRequest với ObjectWalkedExtended, mổ thuật toán, thí nghiệm inject |
+| [05 — Mod exp/drop rate](docs/05-mod-rate.md) | Chỉnh rate có đối chứng, ba cái bẫy khiến sửa xong drop lại tệ đi |
 | [05 — Việt hóa](docs/05-viet-hoa.md) | Cơ chế i18n theo từng người chơi, cái bẫy ICU làm nó hỏng trong im lặng, vì sao tên trong game không đổi được từ server |
 
 ---
@@ -69,6 +70,7 @@ scripts/      openmu-up.sh        dựng server một lệnh
               mu-drive.py         điều khiển client qua control socket
               mu-packet-decode.py giải mã dump, tra opcode từ XML của OpenMU
               mu-walk-analyze.py  ghép WalkRequest <-> ObjectWalkedExtended
+              mu-set-rates.sh     chỉnh exp/drop rate, kèm sao lưu và khôi phục
 mu-proxy/     proxy MITM (C#) giải mã SimpleModulus + Xor32 bằng chính code OpenMU
 samples/      dump packet, log anti-cheat, kết quả phân tích — dữ liệu thật
 screenshots/  Lorencia, Devias, Dungeon, Atlans, Tarkan, Icarus
@@ -108,6 +110,9 @@ opcode ở [docs/04](docs/04-anticheat-walk.md#7-opcode-phụ-thuộc-ngôn-ng�
 
 **Chống speedhack đo điểm xuất phát, không đo quãng đường.** Và hàng đợi bị xoá
 sạch nếu hai request cách nhau quá 2 giây, hoặc khi vào safezone.
+
+**Tiền rơi bằng đúng exp nhận được cộng 7.** Nên không thể chỉnh exp rate mà
+không thổi phồng nền kinh tế — exp ×50 thì zen cũng ×50.
 
 ---
 
