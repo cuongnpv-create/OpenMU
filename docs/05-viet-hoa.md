@@ -57,6 +57,28 @@ panel. Phải `UPDATE` thẳng vào DB:
 UPDATE data."Account" SET "LanguageIsoCode"='vi' WHERE "LoginName"='ten_tk';
 ```
 
+### Hai khái niệm "ngôn ngữ", hoàn toàn độc lập
+
+OpenMU có hai thứ đều gọi là ngôn ngữ, và **không có chỗ nào trong source nối
+chúng lại** (grep `LanguageIsoCode` toàn repo không ra kết quả nào dính tới
+`ClientVersion` hay `ClientLanguage`):
+
+| | Là gì | Ảnh hưởng tới |
+|---|---|---|
+| `ClientVersion.Language` | Bản client đang kết nối được build cho ngôn ngữ nào | **Opcode trên đường truyền** |
+| `Account.LanguageIsoCode` | Ngôn ngữ server dùng để viết thông báo | **Chữ người chơi đọc** |
+
+Hệ quả thực tế:
+
+- Cắm client bản Việt vào **không** tự khiến tài khoản nhận thông báo tiếng
+  Việt. Vẫn phải `UPDATE` cột `LanguageIsoCode` bằng tay.
+- Ngược lại, tài khoản đặt `vi` nhưng chơi bằng client bản Anh thì **vẫn** nhận
+  thông báo tiếng Việt, mà gói tin đi bằng opcode của bản Anh.
+
+Nếu bạn dump packet trên client bản Việt, xem bảng opcode ở
+[04 — Chống speedhack](04-anticheat-walk.md) — cách gom nhóm tiếng Việt khác
+nhau tùy từng loại gói, không phải lúc nào cũng giống bản Trung.
+
 ---
 
 ## Cái bẫy: image chính thức chỉ có ICU tiếng Anh

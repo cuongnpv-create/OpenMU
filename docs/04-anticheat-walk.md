@@ -256,21 +256,39 @@ dồn vi phạm theo thời gian dài hơn thay vì chỉ 5 mẫu gần nhất.
 
 ## 7. Opcode phụ thuộc ngôn ngữ
 
-`ObjectMovedPlugIn.GetWalkCode()` trả opcode khác nhau theo
-`ClientVersion.Language`:
+Walk không phải opcode duy nhất đổi theo `ClientVersion.Language`. Có ít nhất
+ba, và **cách gom nhóm tiếng Việt khác nhau ở từng cái** — đây là chỗ dễ sai
+nhất khi decode dump của client bản Việt.
 
-| Ngôn ngữ | Opcode |
-|---|---|
-| English | `0xD4` |
-| Japanese | `0x1D` |
-| **Chinese / Vietnamese** | `0xD9` |
-| Filipino | `0xDD` |
-| Korean | `0xD3` |
-| Thai | `0xD7` |
-| Season 0 (bất kể ngôn ngữ) | `0x10` |
+| Ngôn ngữ | Walk<br>`ObjectMovedPlugIn:123` | Instant move<br>`ObjectMovedPlugIn:211` | Show hit<br>`ShowHitPlugIn:85` |
+|---|---|---|---|
+| English | `0xD4` | `0x15` | `0x11` |
+| **Vietnamese** | **`0xD9`** | **`0x15`** | **`0xDC`** |
+| Chinese | `0xD9` | `0xD7` | `0xD0` |
+| Korean | `0xD3` | `0xD7` | `0xDF` |
+| Japanese | `0x1D` | `0xDC` | `0xD6` |
+| Thai | `0xD7` | `0xD9` | — |
+| Filipino | `0xDD` | `0xD6` | `0xDF` |
+| Season 0 / < 1 | `0x10` | `0x11` | `0x15` |
 
-Nếu bạn dump packet trên client bản Việt hoá thì phải tìm `0xD9`, không phải
-`0xD4`. Đây là cách Webzen làm khó người viết bot/emulator ngày xưa.
+Đọc theo hàng tiếng Việt thì thấy ngay cái bẫy:
+
+- **Walk** — Việt đi chung với **Trung** (`0xD9`)
+- **Instant move** — Việt đi chung với **Anh** (`0x15`); Trung là `0xD7`
+- **Show hit** — Việt **đứng một mình** (`0xDC`)
+
+Nên quy tắc "bản Việt giống bản Trung" chỉ đúng cho walk. Suy rộng ra hai
+opcode kia là decode sai.
+
+Thêm một cái bẫy nữa: `0xD9` vừa là walk của Việt/Trung, vừa là instant move
+của Thái. Cùng một byte, ngữ cảnh khác nhau — decode mà không biết trước ngôn
+ngữ client thì nhầm là chuyện sớm muộn.
+
+Đây là cách Webzen làm khó người viết bot/emulator ngày xưa.
+
+> Lưu ý: `ClientVersion.Language` (bản build của client, quyết định opcode) hoàn
+> toàn độc lập với `Account.LanguageIsoCode` (ngôn ngữ server viết thông báo).
+> Xem [05 — Việt hóa](05-viet-hoa.md).
 
 ---
 

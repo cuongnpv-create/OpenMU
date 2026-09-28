@@ -101,7 +101,10 @@ const bool isEncrypted = Port > 0xADFF || Port < 0xAD00;
 Chính comment `todo:` ngay trên dòng đó cũng thừa nhận đây là giả định tồi.
 
 **Opcode phụ thuộc ngôn ngữ client.** Gói di chuyển là `0xD4` với bản English
-nhưng **`0xD9` với bản Việt/Trung**, `0xD3` Hàn, `0xD7` Thái.
+nhưng **`0xD9` với bản Việt/Trung**, `0xD3` Hàn, `0xD7` Thái. Nhưng cách gom
+nhóm này **chỉ đúng cho gói di chuyển** — ở gói dịch chuyển tức thời bản Việt
+lại giống bản Anh, còn ở gói sát thương thì đứng một mình. Bảng đầy đủ ba
+opcode ở [docs/04](docs/04-anticheat-walk.md#7-opcode-phụ-thuộc-ngôn-ngữ).
 
 **Chống speedhack đo điểm xuất phát, không đo quãng đường.** Và hàng đợi bị xoá
 sạch nếu hai request cách nhau quá 2 giây, hoặc khi vào safezone.
