@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MuProxy</RootNamespace>
+    <AssemblyName>MuProxy</AssemblyName>
+    <NoWarn>$(NoWarn);SA0001;SA1600;CS1591</NoWarn>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <RunAnalyzers>false</RunAnalyzers>
+  </PropertyGroup>
+
+  <!--
+    Đường dẫn tới repo OpenMU gốc (https://github.com/MUnique/OpenMU).
+    Mặc định giả định nó nằm cạnh repo này:
+        <thư-mục-cha>/OpenMU
+        <thư-mục-cha>/openmu/mu-proxy    <- project này
+    Để chỗ khác thì truyền lúc build:
+        dotnet build -c Release -p:OpenMuPath=/đường/dẫn/tới/OpenMU
+  -->
+  <PropertyGroup>
+    <OpenMuPath Condition="'$(OpenMuPath)' == ''">$(MSBuildThisFileDirectory)../../OpenMU</OpenMuPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Dùng thẳng project của OpenMU đã clone: bảo đảm thuật toán và khoá
+         khớp tuyệt đối với server đang chạy, không phụ thuộc version NuGet. -->
+    <ProjectReference Include="$(OpenMuPath)/src/Network/MUnique.OpenMU.Network.csproj" />
+    <!-- Network chỉ tham chiếu Logging.Abstractions (ILoggerFactory).
+         Lớp LoggerFactory cụ thể nằm ở package này. -->
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
